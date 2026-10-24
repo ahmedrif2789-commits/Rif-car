@@ -1,0 +1,1148 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Ste MAHIRA CAR - كراء السيارات بمدينة الحسيمة، المغرب. تواصل معنا عبر الهاتف أو واتساب للاستفسار والحجز.">
+
+    <meta name="theme-color" content="#1d3557">
+
+    <title>Ste MAHIRA CAR | كراء السيارات بالحسيمة</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary: #e63946;
+            --primary-dark: #c1272d;
+            --secondary: #1d3557;
+            --accent: #457b9d;
+            --background: #f8f9fa;
+            --white: #ffffff;
+            --text: #2b2d42;
+            --muted: #6c757d;
+            --border: #e9ecef;
+            --radius: 14px;
+            --shadow: 0 10px 30px rgba(0, 0, 0, .08);
+            --transition: .3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Tajawal', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 90px;
+        }
+
+        body {
+            background: var(--background);
+            color: var(--text);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        button {
+            font: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .container {
+            max-width: 1200px;
+            width: calc(100% - 40px);
+            margin: auto;
+        }
+
+        /* HEADER */
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, .97);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, .05);
+        }
+
+        .navbar {
+            min-height: 76px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            color: var(--secondary);
+            font-size: 22px;
+            font-weight: 800;
+            white-space: nowrap;
+        }
+
+        .logo i,
+        .logo span {
+            color: var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 22px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--secondary);
+            font-weight: 700;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .nav-btn {
+            background: var(--primary);
+            color: var(--white);
+            padding: 10px 17px;
+            border-radius: 25px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            font-weight: 700;
+            white-space: nowrap;
+            transition: var(--transition);
+        }
+
+        .nav-btn:hover {
+            background: var(--primary-dark);
+        }
+
+        .menu-toggle {
+            display: none;
+            border: 0;
+            background: transparent;
+            color: var(--secondary);
+            font-size: 25px;
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        /* HERO */
+
+        .hero {
+            padding: 135px 0 75px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .hero-content h1 {
+            color: var(--secondary);
+            font-size: clamp(32px, 4vw, 47px);
+            line-height: 1.35;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+
+        .hero-content h1 span {
+            color: var(--primary);
+        }
+
+        .hero-content p {
+            font-size: 18px;
+            color: var(--muted);
+            margin-bottom: 28px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 12px 23px;
+            border-radius: 10px;
+            font-weight: 700;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            gap: 9px;
+            border: 0;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .btn-primary {
+            color: var(--white);
+            background: var(--primary);
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            color: var(--white);
+            background: var(--secondary);
+        }
+
+        .btn-secondary:hover {
+            background: #152841;
+            transform: translateY(-2px);
+        }
+
+        .hero-image-container {
+            position: relative;
+            min-width: 0;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 360px;
+            object-fit: cover;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            background: #eee;
+        }
+
+        .badge-rating {
+            position: absolute;
+            bottom: -18px;
+            right: 20px;
+            background: var(--white);
+            padding: 11px 20px;
+            border-radius: 30px;
+            box-shadow: var(--shadow);
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            font-weight: 700;
+            color: var(--secondary);
+        }
+
+        .badge-rating i {
+            color: #ffc107;
+        }
+
+        /* SECTIONS */
+
+        .section {
+            padding: 75px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 42px;
+        }
+
+        .section-title h2 {
+            color: var(--secondary);
+            font-size: clamp(27px, 3vw, 35px);
+            margin-bottom: 8px;
+        }
+
+        .section-title p {
+            color: var(--muted);
+            font-size: 16px;
+        }
+
+        /* CARS */
+
+        .cars-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 25px;
+        }
+
+        .car-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            overflow: hidden;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow);
+            display: flex;
+            flex-direction: column;
+            transition: var(--transition);
+            min-width: 0;
+        }
+
+        .car-card:hover {
+            transform: translateY(-6px);
+        }
+
+        .car-img-wrapper {
+            width: 100%;
+            height: 235px;
+            background: #edf0f2;
+            overflow: hidden;
+        }
+
+        .car-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform .4s ease;
+        }
+
+        .car-card:hover .car-img-wrapper img {
+            transform: scale(1.04);
+        }
+
+        .car-info {
+            padding: 22px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .car-title {
+            color: var(--secondary);
+            font-size: 22px;
+            font-weight: 800;
+            margin-bottom: 12px;
+        }
+
+        .car-features {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            color: var(--muted);
+            font-size: 15px;
+            margin-bottom: 18px;
+        }
+
+        .car-feature-item {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+        }
+
+        .car-feature-item i {
+            color: var(--primary);
+        }
+
+        .car-price {
+            margin-top: auto;
+            padding-top: 16px;
+            border-top: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .price-text {
+            font-size: 16px;
+            font-weight: 800;
+            color: var(--primary);
+        }
+
+        .booking-btn {
+            padding: 9px 13px;
+            font-size: 14px;
+        }
+
+        /* SERVICES */
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 24px;
+        }
+
+        .feature-card {
+            padding: 30px 22px;
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .feature-card i {
+            font-size: 39px;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .feature-card h3 {
+            color: var(--secondary);
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .feature-card p {
+            color: var(--muted);
+        }
+
+        /* ABOUT */
+
+        .about-box {
+            max-width: 900px;
+            margin: auto;
+            padding: 35px;
+            background: var(--white);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            text-align: center;
+            border: 1px solid var(--border);
+        }
+
+        .about-box p {
+            color: var(--muted);
+            font-size: 18px;
+        }
+
+        /* CONTACT */
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 35px;
+            padding: 35px;
+            background: var(--white);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+
+        .contact-info h3 {
+            color: var(--secondary);
+            font-size: 24px;
+            margin-bottom: 22px;
+        }
+
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            gap: 22px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            overflow-wrap: anywhere;
+        }
+
+        .contact-item > i {
+            width: 46px;
+            height: 46px;
+            flex-shrink: 0;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgba(230, 57, 70, .1);
+            color: var(--primary);
+            font-size: 19px;
+        }
+
+        .contact-item strong {
+            color: var(--secondary);
+        }
+
+        .contact-item p {
+            color: var(--muted);
+        }
+
+        .contact-buttons {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .contact-buttons .btn {
+            width: 100%;
+            min-height: 52px;
+        }
+
+        /* FOOTER */
+
+        footer {
+            margin-top: 35px;
+            background: var(--secondary);
+            color: var(--white);
+            text-align: center;
+            padding: 27px 20px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* IMAGE FALLBACK */
+
+        .img-fallback {
+            height: 100%;
+            min-height: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 10px;
+            background: #edf0f2;
+            color: var(--muted);
+            text-align: center;
+            padding: 20px;
+        }
+
+        .img-fallback i {
+            font-size: 35px;
+        }
+
+        /* RESPONSIVE */
+
+        @media (max-width: 1000px) {
+            .nav-links {
+                gap: 13px;
+            }
+
+            .logo {
+                font-size: 19px;
+            }
+
+            .cars-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .hero {
+                gap: 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                width: calc(100% - 30px);
+            }
+
+            .navbar {
+                min-height: 70px;
+                flex-wrap: wrap;
+            }
+
+            .menu-toggle {
+                display: block;
+                order: 3;
+            }
+
+            .nav-btn {
+                margin-right: auto;
+                padding: 9px 13px;
+                font-size: 14px;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--white);
+                padding: 18px 22px 22px;
+                box-shadow: 0 10px 15px rgba(0, 0, 0, .08);
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links li a {
+                display: block;
+                padding: 12px 0;
+                border-bottom: 1px solid var(--border);
+            }
+
+            .nav-links li:last-child a {
+                border-bottom: 0;
+            }
+
+            .hero {
+                padding-top: 110px;
+                padding-bottom: 45px;
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 35px;
+            }
+
+            .hero-content h1 {
+                font-size: 34px;
+            }
+
+            .hero-content p {
+                font-size: 16px;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .hero-image {
+                height: 290px;
+            }
+
+            .badge-rating {
+                right: 50%;
+                transform: translateX(50%);
+                white-space: nowrap;
+            }
+
+            .section {
+                padding: 55px 0;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-container {
+                grid-template-columns: 1fr;
+                padding: 25px 20px;
+                gap: 30px;
+            }
+
+            .about-box {
+                padding: 25px 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo {
+                font-size: 17px;
+                gap: 6px;
+            }
+
+            .nav-btn {
+                padding: 8px 10px;
+                font-size: 13px;
+            }
+
+            .hero-content h1 {
+                font-size: 29px;
+            }
+
+            .hero-buttons .btn {
+                width: 100%;
+            }
+
+            .hero-image {
+                height: 230px;
+            }
+
+            .cars-grid {
+                grid-template-columns: 1fr;
+                gap: 22px;
+            }
+
+            .car-img-wrapper {
+                height: 230px;
+            }
+
+            .car-info {
+                padding: 18px;
+            }
+
+            .car-price {
+                align-items: center;
+            }
+
+            .section-title {
+                margin-bottom: 30px;
+            }
+
+            .section-title h2 {
+                font-size: 27px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                scroll-behavior: auto !important;
+                transition: none !important;
+                animation: none !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <nav class="navbar container" aria-label="القائمة الرئيسية">
+
+            <a class="logo" href="#hero" aria-label="Ste MAHIRA CAR - الرئيسية">
+                <i class="fa-solid fa-car-side"></i>
+                <span id="brand-name">Ste MAHIRA CAR</span>
+            </a>
+
+            <button
+                class="menu-toggle"
+                id="menu-toggle"
+                type="button"
+                aria-label="فتح القائمة"
+                aria-expanded="false"
+                aria-controls="nav-links">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#hero">الرئيسية</a></li>
+                <li><a href="#cars">سياراتنا</a></li>
+                <li><a href="#services">خدماتنا</a></li>
+                <li><a href="#about">عن الشركة</a></li>
+                <li><a href="#contact">اتصل بنا</a></li>
+            </ul>
+
+            <a
+                href="https://wa.me/212660703545"
+                class="nav-btn"
+                target="_blank"
+                rel="noopener noreferrer">
+                <i class="fa-brands fa-whatsapp"></i>
+                واتساب
+            </a>
+
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- HERO -->
+        <section class="hero container" id="hero">
+
+            <div class="hero-content">
+                <h1>
+                    أفضل خدمة كراء السيارات في
+                    <span>الحسيمة</span>
+                </h1>
+
+                <p>
+                    استمتع برحلتك مع Ste MAHIRA CAR.
+                    اكتشف سياراتنا وتواصل معنا لمعرفة الأسعار
+                    واختيار السيارة المناسبة لرحلتك.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#cars" class="btn btn-primary">
+                        <i class="fa-solid fa-car"></i>
+                        اكتشف سياراتنا
+                    </a>
+
+                    <a href="#contact" class="btn btn-secondary">
+                        <i class="fa-solid fa-phone"></i>
+                        تواصل معنا
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-image-container">
+                <img
+                    id="hero-car-img"
+                    class="hero-image"
+                    src="https://i.supaimg.com/d8568631-6116-46bf-bd5f-e2b290d4c672/ef875a4d-9100-4901-afee-f88a3c31c34c.jpg"
+                    alt="السيارة الأولى من أسطول Ste MAHIRA CAR"
+                    fetchpriority="high">
+
+                <div class="badge-rating">
+                    <i class="fa-solid fa-star"></i>
+                    <span>تواصل معنا لمعرفة التفاصيل</span>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- CARS -->
+        <section class="section" id="cars">
+            <div class="container">
+
+                <div class="section-title">
+                    <h2>أسطول سياراتنا</h2>
+                    <p>
+                        اكتشف السيارات المتوفرة لدينا وتواصل معنا
+                        لمعرفة الثمن وتفاصيل الحجز.
+                    </p>
+                </div>
+
+                <div class="cars-grid" id="cars-grid">
+
+                    <!-- السيارة الأولى -->
+                    <article class="car-card">
+                        <div class="car-img-wrapper">
+                            <img
+                                src="https://i.supaimg.com/d8568631-6116-46bf-bd5f-e2b290d4c672/ef875a4d-9100-4901-afee-f88a3c31c34c.jpg"
+                                alt="Hyundai Accent"
+                                loading="lazy">
+                        </div>
+
+                        <div class="car-info">
+                            <h3 class="car-title">Hyundai Accent</h3>
+
+                            <div class="car-features">
+                                <div class="car-feature-item">
+                                    <i class="fa-solid fa-palette"></i>
+                                    فضي
+                                </div>
+                            </div>
+
+                            <div class="car-price">
+                                <span class="price-text">الثمن عند التواصل</span>
+
+                                <a
+                                    href="https://wa.me/212660703545?text=السلام%20عليكم،%20أرغب%20في%20الاستفسار%20عن%20كراء%20Hyundai%20Accent"
+                                    class="btn btn-primary booking-btn"
+                                    target="_blank"
+                                    rel="noopener noreferrer">
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                    حجز الآن
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- السيارة الثانية -->
+                    <article class="car-card">
+                        <div class="car-img-wrapper">
+                            <img
+                                src="https://i.supaimg.com/d8568631-6116-46bf-bd5f-e2b290d4c672/0222e452-8d8d-4b96-bb45-74d84634e887.jpg"
+                                alt="Fiat Tipo"
+                                loading="lazy">
+                        </div>
+
+                        <div class="car-info">
+                            <h3 class="car-title">Fiat Tipo</h3>
+
+                            <div class="car-features">
+                                <div class="car-feature-item">
+                                    <i class="fa-solid fa-palette"></i>
+                                    بني
+                                </div>
+                            </div>
+
+                            <div class="car-price">
+                                <span class="price-text">الثمن عند التواصل</span>
+
+                                <a
+                                    href="https://wa.me/212660703545?text=السلام%20عليكم،%20أرغب%20في%20الاستفسار%20عن%20كراء%20Fiat%20Tipo"
+                                    class="btn btn-primary booking-btn"
+                                    target="_blank"
+                                    rel="noopener noreferrer">
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                    حجز الآن
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- السيارة الثالثة -->
+                    <article class="car-card">
+                        <div class="car-img-wrapper">
+                            <img
+                                src="https://i.supaimg.com/d8568631-6116-46bf-bd5f-e2b290d4c672/2aa05368-f3eb-4440-a77a-cc937059b1de.jpg"
+                                alt="Fiat 500X"
+                                loading="lazy">
+                        </div>
+
+                        <div class="car-info">
+                            <h3 class="car-title">Fiat 500X</h3>
+
+                            <div class="car-features">
+                                <div class="car-feature-item">
+                                    <i class="fa-solid fa-palette"></i>
+                                    كحل
+                                </div>
+                            </div>
+
+                            <div class="car-price">
+                                <span class="price-text">الثمن عند التواصل</span>
+
+                                <a
+                                    href="https://wa.me/212660703545?text=السلام%20عليكم،%20أرغب%20في%20الاستفسار%20عن%20كراء%20Fiat%20500X"
+                                    class="btn btn-primary booking-btn"
+                                    target="_blank"
+                                    rel="noopener noreferrer">
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                    حجز الآن
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICES -->
+        <section class="section" id="services">
+            <div class="container">
+
+                <div class="section-title">
+                    <h2>مميزاتنا وخدماتنا</h2>
+                    <p>هدفنا هو توفير تجربة كراء سيارات سهلة ومريحة.</p>
+                </div>
+
+                <div class="features-grid">
+
+                    <article class="feature-card">
+                        <i class="fa-solid fa-clock"></i>
+                        <h3>التواصل والاستفسار</h3>
+                        <p>
+                            تواصل معنا للاستفسار عن السيارات
+                            المتوفرة ومواعيد الحجز.
+                        </p>
+                    </article>
+
+                    <article class="feature-card">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <h3>الاهتمام بالسيارات</h3>
+                        <p>
+                            نحرص على الاهتمام بالسيارات
+                            وتوفير تجربة كراء مريحة.
+                        </p>
+                    </article>
+
+                    <article class="feature-card">
+                        <i class="fa-solid fa-handshake"></i>
+                        <h3>سهولة التواصل</h3>
+                        <p>
+                            يمكنك التواصل معنا عبر الهاتف
+                            أو واتساب للاستفسار والحجز.
+                        </p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section class="section" id="about">
+            <div class="container">
+
+                <div class="section-title">
+                    <h2>عن الشركة</h2>
+                    <p>تعرف على Ste MAHIRA CAR.</p>
+                </div>
+
+                <div class="about-box">
+                    <p>
+                        Ste MAHIRA CAR شركة متخصصة في كراء السيارات
+                        بمدينة الحسيمة بالمغرب. نوفر لعملائنا إمكانية
+                        الاطلاع على السيارات والتواصل معنا لمعرفة
+                        الأسعار والتفاصيل المتعلقة بالحجز.
+                        هدفنا هو تسهيل عملية التواصل ومساعدتك
+                        على اختيار السيارة المناسبة لرحلتك.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section class="section" id="contact">
+            <div class="container">
+
+                <div class="section-title">
+                    <h2>تواصل معنا</h2>
+                    <p>
+                        اتصل بنا أو راسلنا عبر واتساب للاستفسار
+                        عن السيارات والحجوزات.
+                    </p>
+                </div>
+
+                <div class="contact-container">
+
+                    <div class="contact-info">
+                        <h3>معلومات الاتصال</h3>
+
+                        <div class="contact-details">
+
+                            <div class="contact-item">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <div>
+                                    <strong>العنوان</strong>
+                                    <p>
+                                        03 Rue du Pakistan,
+                                        Al Hoceima 32000, Morocco
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <i class="fa-solid fa-phone"></i>
+                                <div>
+                                    <strong>رقم الهاتف</strong>
+                                    <p dir="ltr">+212 660 703 545</p>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <i class="fa-solid fa-clock"></i>
+                                <div>
+                                    <strong>أوقات العمل</strong>
+                                    <p>يرجى التواصل معنا لتأكيد التوفر.</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="contact-buttons">
+
+                        <a
+                            href="tel:+212660703545"
+                            class="btn btn-secondary">
+                            <i class="fa-solid fa-phone"></i>
+                            اتصال هاتفي مباشر
+                        </a>
+
+                        <a
+                            href="https://wa.me/212660703545"
+                            class="btn btn-primary"
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            <i class="fa-brands fa-whatsapp"></i>
+                            مراسلة عبر واتساب
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <p>
+                &copy; <span id="footer-year"></span>
+                Ste MAHIRA CAR.
+                جميع الحقوق محفوظة.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            // تحديث السنة تلقائياً
+            document.getElementById("footer-year").textContent =
+                new Date().getFullYear();
+
+            // القائمة الخاصة بالهاتف
+            const menuToggle = document.getElementById("menu-toggle");
+            const navLinks = document.getElementById("nav-links");
+            const menuIcon = menuToggle.querySelector("i");
+
+            menuToggle.addEventListener("click", function () {
+                const isOpen = navLinks.classList.toggle("active");
+
+                menuToggle.setAttribute("aria-expanded", String(isOpen));
+                menuToggle.setAttribute(
+                    "aria-label",
+                    isOpen ? "إغلاق القائمة" : "فتح القائمة"
+                );
+
+                menuIcon.className = isOpen
+                    ? "fa-solid fa-xmark"
+                    : "fa-solid fa-bars";
+            });
+
+            // إغلاق القائمة بعد الضغط على أحد الروابط
+            navLinks.querySelectorAll("a").forEach(function (link) {
+                link.addEventListener("click", function () {
+                    navLinks.classList.remove("active");
+
+                    menuToggle.setAttribute("aria-expanded", "false");
+                    menuToggle.setAttribute("aria-label", "فتح القائمة");
+
+                    menuIcon.className = "fa-solid fa-bars";
+                });
+            });
+
+            // إظهار بديل إذا تعذر تحميل صورة
+            function setImageFallback(img, message) {
+                img.onerror = null;
+
+                const wrapper = img.parentElement;
+                const fallback = document.createElement("div");
+                const icon = document.createElement("i");
+                const text = document.createElement("p");
+
+                fallback.className = "img-fallback";
+                icon.className = "fa-solid fa-car-side";
+                text.textContent = message;
+
+                fallback.appendChild(icon);
+                fallback.appendChild(text);
+
+                wrapper.replaceChild(fallback, img);
+            }
+
+            // الصورة الرئيسية
+            const heroImage = document.getElementById("hero-car-img");
+
+            heroImage.addEventListener("error", function () {
+                setImageFallback(
+                    heroImage,
+                    "الصورة الرئيسية غير متاحة حالياً"
+                );
+            });
+
+            // صور السيارات
+            document.querySelectorAll(".car-img-wrapper img").forEach(
+                function (img) {
+                    img.addEventListener("error", function () {
+                        setImageFallback(
+                            img,
+                            "صورة السيارة غير متاحة حالياً"
+                        );
+                    });
+                }
+            );
+
+        });
+    </script>
+
+</body>
+</html>
